@@ -1,0 +1,3 @@
+#define LOCALE_SERVICE_GLOBAL			// GLOBAL version
+
+#define USE_RELATIVE_PATH

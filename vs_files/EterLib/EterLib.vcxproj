@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|Win32">
+      <Configuration>Distribute</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{634437B1-4B3B-48C5-9220-619FB4D8F99B}</ProjectGuid>
+    <RootNamespace>EterLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\EterLib\AttributeData.cpp" />
+    <ClCompile Include="..\..\source\EterLib\AttributeInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\BlockTexture.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Camera.cpp" />
+    <ClCompile Include="..\..\source\EterLib\CollisionData.cpp" />
+    <ClCompile Include="..\..\source\EterLib\ColorTransitionHelper.cpp" />
+    <ClCompile Include="..\..\source\EterLib\CullingManager.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Decal.cpp" />
+    <ClCompile Include="..\..\source\EterLib\DibBar.cpp" />
+    <ClCompile Include="..\..\source\EterLib\EnvironmentMap.cpp" />
+    <ClCompile Include="..\..\source\EterLib\FileLoaderThread.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpBase.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpCollisionObject.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpColor.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpColorInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpD3DXBuffer.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpDetector.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpDevice.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpDIB.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpExpandedImageInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpFontTexture.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpImage.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpImageInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpImageTexture.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpIndexBuffer.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpLightManager.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpMarkInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpMath.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpObjectInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpPixelShader.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpRatioInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpScreen.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpShadowTexture.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpSubImage.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpText.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpTextInstance.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpTexture.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpVertexBuffer.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpVertexBufferDynamic.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpVertexBufferStatic.cpp" />
+    <ClCompile Include="..\..\source\EterLib\GrpVertexShader.cpp" />
+    <ClCompile Include="..\..\source\EterLib\IME.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Input.cpp" />
+    <ClCompile Include="..\..\source\EterLib\JpegFile.cpp" />
+    <ClCompile Include="..\..\source\EterLib\LensFlare.cpp" />
+    <ClCompile Include="..\..\source\EterLib\lineintersect_utils.cpp" />
+    <ClCompile Include="..\..\source\EterLib\MSApplication.cpp" />
+    <ClCompile Include="..\..\source\EterLib\MSWindow.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Mutex.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetAddress.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetDatagram.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetDatagramReceiver.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetDatagramSender.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetDevice.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetPacketHeaderMap.cpp" />
+    <ClCompile Include="..\..\source\EterLib\NetStream.cpp" />
+    <ClCompile Include="..\..\source\EterLib\parser.cpp" />
+    <ClCompile Include="..\..\source\EterLib\PathStack.cpp" />
+    <ClCompile Include="..\..\source\EterLib\ReferenceObject.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Resource.cpp" />
+    <ClCompile Include="..\..\source\EterLib\ResourceManager.cpp" />
+    <ClCompile Include="..\..\source\EterLib\ScreenFilter.cpp" />
+    <ClCompile Include="..\..\source\EterLib\SkyBox.cpp" />
+    <ClCompile Include="..\..\source\EterLib\StateManager.cpp" />
+    <ClCompile Include="..\..\source\EterLib\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\source\EterLib\TargaResource.cpp" />
+    <ClCompile Include="..\..\source\EterLib\TextBar.cpp" />
+    <ClCompile Include="..\..\source\EterLib\TextFileLoader.cpp" />
+    <ClCompile Include="..\..\source\EterLib\TextTag.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Thread.cpp" />
+    <ClCompile Include="..\..\source\EterLib\Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\EterLib\AttributeData.h" />
+    <ClInclude Include="..\..\source\EterLib\AttributeInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\BlockTexture.h" />
+    <ClInclude Include="..\..\source\EterLib\Camera.h" />
+    <ClInclude Include="..\..\source\EterLib\CollisionData.h" />
+    <ClInclude Include="..\..\source\EterLib\ColorTransitionHelper.h" />
+    <ClInclude Include="..\..\source\EterLib\CullingManager.h" />
+    <ClInclude Include="..\..\source\EterLib\Decal.h" />
+    <ClInclude Include="..\..\source\EterLib\DibBar.h" />
+    <ClInclude Include="..\..\source\EterLib\Dimm.h" />
+    <ClInclude Include="..\..\source\EterLib\Dynamic.h" />
+    <ClInclude Include="..\..\source\EterLib\EnvironmentMap.h" />
+    <ClInclude Include="..\..\source\EterLib\Event.h" />
+    <ClInclude Include="..\..\source\EterLib\FileLoaderThread.h" />
+    <ClInclude Include="..\..\source\EterLib\FuncObject.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpBase.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpCollisionObject.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpColor.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpColorInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpD3DXBuffer.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpDetector.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpDevice.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpDIB.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpExpandedImageInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpFontTexture.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpImage.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpImageInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpImageTexture.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpIndexBuffer.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpLightManager.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpMarkInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpMath.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpObjectInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpPixelShader.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpRatioInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpScreen.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpShadowTexture.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpSubImage.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpText.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpTextInstance.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpTexture.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpVertexBuffer.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpVertexBufferDynamic.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpVertexBufferStatic.h" />
+    <ClInclude Include="..\..\source\EterLib\GrpVertexShader.h" />
+    <ClInclude Include="..\..\source\EterLib\IME.h" />
+    <ClInclude Include="..\..\source\EterLib\Input.h" />
+    <ClInclude Include="..\..\source\EterLib\JpegFile.h" />
+    <ClInclude Include="..\..\source\EterLib\LensFlare.h" />
+    <ClInclude Include="..\..\source\EterLib\lineintersect_utils.h" />
+    <ClInclude Include="..\..\source\EterLib\MSApplication.h" />
+    <ClInclude Include="..\..\source\EterLib\msctf.h" />
+    <ClInclude Include="..\..\source\EterLib\MSWindow.h" />
+    <ClInclude Include="..\..\source\EterLib\Mutex.h" />
+    <ClInclude Include="..\..\source\EterLib\NetAddress.h" />
+    <ClInclude Include="..\..\source\EterLib\NetDatagram.h" />
+    <ClInclude Include="..\..\source\EterLib\NetDatagramReceiver.h" />
+    <ClInclude Include="..\..\source\EterLib\NetDatagramSender.h" />
+    <ClInclude Include="..\..\source\EterLib\NetDevice.h" />
+    <ClInclude Include="..\..\source\EterLib\NetPacketHeaderMap.h" />
+    <ClInclude Include="..\..\source\EterLib\NetStream.h" />
+    <ClInclude Include="..\..\source\EterLib\parser.h" />
+    <ClInclude Include="..\..\source\EterLib\PathStack.h" />
+    <ClInclude Include="..\..\source\EterLib\Pool.h" />
+    <ClInclude Include="..\..\source\EterLib\Profiler.h" />
+    <ClInclude Include="..\..\source\EterLib\Ray.h" />
+    <ClInclude Include="..\..\source\EterLib\Ref.h" />
+    <ClInclude Include="..\..\source\EterLib\ReferenceObject.h" />
+    <ClInclude Include="..\..\source\EterLib\Resource.h" />
+    <ClInclude Include="..\..\source\EterLib\ResourceManager.h" />
+    <ClInclude Include="..\..\source\EterLib\ScreenFilter.h" />
+    <ClInclude Include="..\..\source\EterLib\SkyBox.h" />
+    <ClInclude Include="..\..\source\EterLib\StateManager.h" />
+    <ClInclude Include="..\..\source\EterLib\StdAfx.h" />
+    <ClInclude Include="..\..\source\EterLib\TargaResource.h" />
+    <ClInclude Include="..\..\source\EterLib\TextBar.h" />
+    <ClInclude Include="..\..\source\EterLib\TextFileLoader.h" />
+    <ClInclude Include="..\..\source\EterLib\TextTag.h" />
+    <ClInclude Include="..\..\source\EterLib\Thread.h" />
+    <ClInclude Include="..\..\source\EterLib\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EterLocale\EterLocale.vcxproj">
+      <Project>{08e76c01-d25c-4684-911c-876a33f27ce1}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

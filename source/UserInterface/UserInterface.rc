@@ -1,0 +1,257 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include "version.h" 
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 일본어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_POSSESSIVE_MORPHENE "'s"
+END
+
+#endif    // 일본어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 중국어(중국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_POSSESSIVE_MORPHENE "'s"
+    IDS_WARN_BAD_DRIVER     "句寡퀭콘뫘劤鞫엥혜땡。"
+    IDS_WARN_NO_TNL         "퀭돨鞫엥꼇連넣3D TnL 袒숭속醵\n踏狗쉥轟랬攣끽頓契。"
+END
+
+#endif    // 중국어(중국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SELECT_LOCALE DIALOGEX 0, 0, 182, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "SELECT LOCALE"
+FONT 10, "Arial", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "START",IDC_START,44,123,40,13
+    PUSHBUTTON      "EXIT",IDC_EXIT,96,123,40,13
+    LISTBOX         IDC_LOCALE_LIST,6,5,170,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_NORMAL       CURSOR                  "Cursors\\cursor.cur"
+IDC_CURSOR_CHAIR        CURSOR                  "Cursors\\cursor_chair.cur"
+IDC_CURSOR_DOOR         CURSOR                  "Cursors\\cursor_door.cur"
+IDC_CURSOR_NO           CURSOR                  "Cursors\\cursor_no.cur"
+IDC_CURSOR_PICK         CURSOR                  "Cursors\\cursor_pick.cur"
+IDC_CURSOR_TALK         CURSOR                  "Cursors\\cursor_talk.cur"
+IDC_CURSOR_ATTACK       CURSOR                  "Cursors\\cursor_attack.cur"
+IDC_CURSOR_BUY          CURSOR                  "cursors\\cursor_buy.cur"
+IDC_CURSOR_SELL         CURSOR                  "cursors\\cursor_sell.cur"
+IDC_CURSOR_CAMERA_ROTATE CURSOR                  "Cursors\\cursor_camera_rotate.cur"
+IDC_CURSOR_HSIZE        CURSOR                  "Cursors\\cursor_hsize.cur"
+IDC_CURSOR_VSIZE        CURSOR                  "Cursors\\cursor_vsize.cur"
+IDC_CURSOR_HVSIZE       CURSOR                  "Cursors\\cursor_hvsize.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SELECT_LOCALE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 102
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_METIN2              ICON                    "metin2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VER_FILE_VERSION 
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080003b5"
+        BEGIN
+            VALUE "CompanyName", "Ymir Entertainment"
+            VALUE "FileDescription", "Metin2Client"
+            VALUE "FileVersion",  VER_FILE_VERSION_STR "\0"
+            VALUE "InternalName", "Metin2Client"
+            VALUE "LegalCopyright", "Copyright (C) 2011"
+            VALUE "OriginalFilename", "Metin2Client.exe"
+            VALUE "ProductName", "Metin2Client"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_NAME            "메틴2"
+    IDS_POSSESSIVE_MORPHENE "의"
+    IDS_WARN_BAD_DRIVER     "그래픽 드라이버를 업데이트 하시기 바랍니다."
+    IDS_WARN_NO_TNL         "사용하고 계신 시스템의 그래픽카드는 3D TnL 하드웨어 가속이 지원되지 않아\n게임이 느리게 실행되거나 제대로 실행되지 않을수 있습니다."
+    IDS_ERR_CANNOT_READ_FILE "%s 파일을 읽을 수 없습니다."
+    IDS_ERR_NOT_LATEST_FILE "'%s' 파일은 최신버전이 아닙니다. 런처를 다시 실행해주세요."
+    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "클라이언트는 패처를 사용해서 실행되어야 합니다."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 영어(미국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_NAME            "Metin 2"
+    IDS_POSSESSIVE_MORPHENE "'s"
+    IDS_WARN_BAD_DRIVER     "IDS_WARN_BAD_DRIVER"
+    IDS_WARN_NO_TNL         "IDS_WARN_NO_TNL"
+    IDS_ERR_CANNOT_READ_FILE "Cannot read %s file"
+    IDS_ERR_NOT_LATEST_FILE "File '%s' is not latest version. Please launch patcher."
+    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "Please run patcher."
+END
+
+#endif    // 영어(미국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

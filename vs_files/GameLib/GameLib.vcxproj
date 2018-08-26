@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|Win32">
+      <Configuration>Distribute</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0C8DEF2C-F22D-4AD8-9D59-3147604C6B22}</ProjectGuid>
+    <RootNamespace>GameLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;BACKGROUND_LOADING;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;BACKGROUND_LOADING;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../extern/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;USE_LOD;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\GameLib\ActorInstance.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceAttach.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceBattle.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceBlend.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceCollisionDetection.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceData.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceEvent.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceFly.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceMotion.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceMotionEvent.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstancePosition.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceRender.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceRotation.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceSync.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ActorInstanceWeaponTrace.cpp" />
+    <ClCompile Include="..\..\source\GameLib\Area.cpp" />
+    <ClCompile Include="..\..\source\GameLib\AreaLoaderThread.cpp" />
+    <ClCompile Include="..\..\source\GameLib\AreaTerrain.cpp" />
+    <ClCompile Include="..\..\source\GameLib\DungeonBlock.cpp" />
+    <ClCompile Include="..\..\source\GameLib\FlyingData.cpp" />
+    <ClCompile Include="..\..\source\GameLib\FlyingInstance.cpp" />
+    <ClCompile Include="..\..\source\GameLib\FlyingObjectManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\FlyTarget.cpp" />
+    <ClCompile Include="..\..\source\GameLib\FlyTrace.cpp" />
+    <ClCompile Include="..\..\source\GameLib\GameEventManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\GameType.cpp" />
+    <ClCompile Include="..\..\source\GameLib\GameUtil.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ItemData.cpp" />
+    <ClCompile Include="..\..\source\GameLib\ItemManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapBase.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoor.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorCharacterShadow.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorIndexBuffer.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorLoad.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorQuadtree.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorRender.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorRenderHTP.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorRenderSTP.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorUpdate.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapOutdoorWater.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapType.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MapUtil.cpp" />
+    <ClCompile Include="..\..\source\GameLib\MonsterAreaInfo.cpp" />
+    <ClCompile Include="..\..\source\GameLib\PhysicsObject.cpp" />
+    <ClCompile Include="..\..\source\GameLib\Property.cpp" />
+    <ClCompile Include="..\..\source\GameLib\PropertyLoader.cpp" />
+    <ClCompile Include="..\..\source\GameLib\PropertyManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\RaceData.cpp" />
+    <ClCompile Include="..\..\source\GameLib\RaceDataFile.cpp" />
+    <ClCompile Include="..\..\source\GameLib\RaceManager.cpp" />
+    <ClCompile Include="..\..\source\GameLib\RaceMotionData.cpp" />
+    <ClCompile Include="..\..\source\GameLib\SnowEnvironment.cpp" />
+    <ClCompile Include="..\..\source\GameLib\SnowParticle.cpp" />
+    <ClCompile Include="..\..\source\GameLib\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\source\GameLib\TerrainDecal.cpp" />
+    <ClCompile Include="..\..\source\GameLib\TerrainPatch.cpp" />
+    <ClCompile Include="..\..\source\GameLib\TerrainQuadtree.cpp" />
+    <ClCompile Include="..\..\source\GameLib\WeaponTrace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\GameLib\ActorInstance.h" />
+    <ClInclude Include="..\..\source\GameLib\ActorInstanceInterface.h" />
+    <ClInclude Include="..\..\source\GameLib\Area.h" />
+    <ClInclude Include="..\..\source\GameLib\AreaLoaderThread.h" />
+    <ClInclude Include="..\..\source\GameLib\AreaTerrain.h" />
+    <ClInclude Include="..\..\source\GameLib\DungeonBlock.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyHandler.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyingData.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyingInstance.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyingObjectManager.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyTarget.h" />
+    <ClInclude Include="..\..\source\GameLib\FlyTrace.h" />
+    <ClInclude Include="..\..\source\GameLib\GameEventManager.h" />
+    <ClInclude Include="..\..\source\GameLib\GameType.h" />
+    <ClInclude Include="..\..\source\GameLib\GameUtil.h" />
+    <ClInclude Include="..\..\source\GameLib\Interface.h" />
+    <ClInclude Include="..\..\source\GameLib\ItemData.h" />
+    <ClInclude Include="..\..\source\GameLib\ItemManager.h" />
+    <ClInclude Include="..\..\source\GameLib\MapBase.h" />
+    <ClInclude Include="..\..\source\GameLib\MapManager.h" />
+    <ClInclude Include="..\..\source\GameLib\MapOutdoor.h" />
+    <ClInclude Include="..\..\source\GameLib\MapType.h" />
+    <ClInclude Include="..\..\source\GameLib\MapUtil.h" />
+    <ClInclude Include="..\..\source\GameLib\MonsterAreaInfo.h" />
+    <ClInclude Include="..\..\source\GameLib\PhysicsObject.h" />
+    <ClInclude Include="..\..\source\GameLib\Property.h" />
+    <ClInclude Include="..\..\source\GameLib\PropertyLoader.h" />
+    <ClInclude Include="..\..\source\GameLib\PropertyManager.h" />
+    <ClInclude Include="..\..\source\GameLib\RaceData.h" />
+    <ClInclude Include="..\..\source\GameLib\RaceManager.h" />
+    <ClInclude Include="..\..\source\GameLib\RaceMotionData.h" />
+    <ClInclude Include="..\..\source\GameLib\RaceMotionDataEvent.h" />
+    <ClInclude Include="..\..\source\GameLib\SnowEnvironment.h" />
+    <ClInclude Include="..\..\source\GameLib\SnowParticle.h" />
+    <ClInclude Include="..\..\source\GameLib\StdAfx.h" />
+    <ClInclude Include="..\..\source\GameLib\TerrainDecal.h" />
+    <ClInclude Include="..\..\source\GameLib\TerrainPatch.h" />
+    <ClInclude Include="..\..\source\GameLib\TerrainQuadtree.h" />
+    <ClInclude Include="..\..\source\GameLib\WeaponTrace.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
